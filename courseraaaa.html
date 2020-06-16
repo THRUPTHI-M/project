@@ -1,0 +1,266 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<title>Module_3_Assignment</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<style>
+	body {
+  font-size: 30px;
+  color: black;
+  font-weight:bold;
+  background-color:yellow;
+  font-family: 'Oxygen', sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 27px;
+  text-align: center;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  margin-bottom: 30px;
+}
+
+.section { 
+  background-color: orange;
+    border: 2px solid black;
+    margin-top: 20px; 
+    margin-left: 20px;
+    margin-right: 0px; 
+    padding: 3px;
+    text-align: justify;
+    position: relative;
+ }
+
+span {
+  font-size: 20px;
+  width: 100%;
+  font-weight: bold;
+  text-align: center;
+}
+
+#nr1  {
+  color:black;
+  width: 100%;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+#nr2 {
+  color: rgb(0, 0, 0);
+  width: 100%;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+#nr3 {
+  color: rgb(0, 0, 0);
+  width: 100%;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.row {
+  width: 100%;
+}
+/* HEADER */
+#header-nav {
+  background-color: rgb(250,250,250);
+  border-radius: 0;
+  border: 0;
+}
+
+.navbar-brand {
+  padding-top: 0px;
+}
+.navbar-brand h1 { /* Company's name */
+  font-family: 'Lora', serif; 
+  color: rgb(15,200,90);
+  font-size: 1.2em;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #222;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: .75;
+}
+.navbar-brand a:hover, .navbar-brand a:focus {
+  text-decoration: none;
+  padding:0px;
+}
+.navbar-brand h2 { /* Our Menu */
+  color: green;
+  font-weight: bold;
+  font-size: 15em;
+  text-align: center;
+  margin:15px;
+  padding:0px ;
+}
+
+#nav-list {  /* #nav-list is the <ul> under the navbar section */
+  margin-top: 10px;
+}
+#nav-list a { /* this is for link/glyphicon color and aligning to center */
+  color: rgb(15,200,90);
+  text-align: center;
+}
+#nav-list a:hover { /* this is for changing mouse pointer when it goes over glyphicon */
+  background: orange;
+}
+#nav-list a span { /* for font options of navigation list elements */
+  font-size: 1.2em;
+}
+
+p .text-center {
+  margin-top: 30px;
+}
+
+.navbar-header button.navbar-toggle, .navbar-header .icon-bar {
+  border: 1px solid rgb(15,200,90);
+}
+.navbar-header button.navbar-toggle {
+  clear: both;
+  margin-top: -30px; /* This is for 'Computers' message to be in the top part, to override 'float' collapsing feature */
+}
+/* END HEADER */
+.navbar-toggle{
+	position:relative;
+	float:right;
+	padding:9px 10px;
+	margin-top:8px;
+	margin-right:15px;
+	background-color:transparent;
+	background-image:none;
+	border:1px solid transparent;
+	border-radius:4px;
+}
+
+.navbar-toggle:focus {
+outline:0;
+}
+
+.navbar-toggle.icon-bar{
+	display:black;
+	width:22px;
+	height:2px;
+	border-radius: 1px;
+}
+
+.navbar-toggle.icon-bar+.icon-bar{
+	margin-top: 10px;
+}
+@media (min-width: 768px) {
+	.navbar-toggle{
+	display:none;}
+}
+
+
+/********** Extra small devices only **********/
+@media (max-width: 767px) {
+  /* Header */
+  .navbar-brand {
+    padding-top: 0px;
+    margin: 0px;
+    float:left;
+    height: 80px; /* To set a specifical height of the heading for phone screens*/
+  }
+  .navbar-brand h1 { /* Company's name */
+    padding-top: 0px;
+    margin:0px;
+    float:left;
+    font-size: 5vw; /* 1vw = 1% of viewport width 
+    This adjusts font size together with the display size */
+  }
+
+  #collapsable-nav a { /* Collapsed nav menu text */
+    font-size: 1.2em;
+  }
+ /* End Header */
+
+ /* Desktop PC view */
+
+@media (min-width: 992px) {
+
+  .col-lg-4 {
+    width: 33.33%;
+    float: left;
+  }
+}
+
+/* Tablet PC view */
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .col-md-6 {
+    width: 50%;
+    float: left;
+  }
+  .col-md-12 {
+    width: 100%;
+    float: left;
+  }
+}
+/* Cell phone view */
+@media (min-width: 767px)  {
+		display: none
+	}
+
+</style>
+<body><header>
+    <header class="nav-header">
+    <nav id="header-nav" class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <div id="nav-brand" class="navbar-brand">
+            Food, LLC
+     
+          </div>
+	
+		<button type='button' class='navbar-toggle collapsed' data-toggle='collapse' data-target='#collapsable-nav' aria-expanded='false'>
+							<span class='sr-only'>Toggle navigation</span>
+							<span class='icon-bar'></span>
+							<span class='icon-bar'></span>
+							<span class='icon-bar'></span>
+						</button> <!--This code is copied from getbootstrap.com/components/#navbar -->
+				</div>
+				<div id="collapsable-nav" class="collapse navbar-collapse">
+           <ul id="nav-list" class="nav navbar-nav navbar-right">
+           	<li> <!-- 'active' will highlight the button -->
+              <a href="index.html">
+                <span class="visible-xs active"></span> Chicken</a> <!-- 'Home' button
+                to view on a extra-small size screen -->
+            </li>
+            <li class="visible-xs active">
+              <a href="index.html">
+                <span></span> Beef</a> <!-- br is to separate the glyphicon and its name, hidden-xs to hide it when the size of the screen is small -->
+            </li>
+            <li class="visible-xs active">
+              <a href="#">
+                <span></span> Sushi</a>
+            </li>
+          </ul><!-- #nav-list -->
+        </div><!-- .collapse .navbar-collapse -->
+      </div><!-- .container -->
+    </nav><!-- #header-nav -->
+  </header>
+
+  <h1 class="text-center">Our Menu </h1>
+		<div class='row'>
+			<div class='col-lg-12 col-md-12 sm-12xs-12'>
+				<div class='section'>
+					<div id='nr1'>Chicken</div>
+						<p>Happiness is when your life fulfills your needs.
+In other words, happiness comes when you feel satisfied and fulfilled. Happiness is a feeling of contentment, that life is just as it should be. Perfect happiness, enlightenment, comes when you have all of your needs satisfied.
+</p>
+				</div>
+			</div>
+			
+</body>
+</html>
